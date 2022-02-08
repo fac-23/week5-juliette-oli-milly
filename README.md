@@ -7,6 +7,6 @@ Constellation API ???
 
 # Roles
 
-Oli - DevOps
-Milly - Facilitator/QA
-Juliette - UX/UI
+# Oli - DevOps
+# Milly - Facilitator/QA
+# Juliette - UX/UI
