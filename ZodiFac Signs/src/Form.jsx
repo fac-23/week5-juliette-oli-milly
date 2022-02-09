@@ -1,4 +1,5 @@
 import React from "react";
+import FetchHoroscope from "./FetchHoroscope.jsx";
 
 function Form() {
   const [name, setName] = React.useState("");
@@ -8,13 +9,22 @@ function Form() {
   // Render this data on the page
   // Add event listener to fire when user enters data
   return (
-    <form>
-      <label htmlFor="name">Name</label>
-      <input name="name" type="text" id="name"></input>
-      <label htmlFor="starsign">Star Sign</label>
-      <input name="starsign" type="text" id="starsign"></input>
-      <button type="submit">Submit</button>
-    </form>
+    <div>
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          setName(event.target.name.value);
+          setStarsign(event.target.starsign.value);
+        }}
+      >
+        <label htmlFor="name">Name</label>
+        <input name="name" type="text" id="name"></input>
+        <label htmlFor="starsign">Star Sign</label>
+        <input name="starsign" type="text" id="starsign"></input>
+        <button type="submit">Submit</button>
+      </form>
+      <FetchHoroscope name={name} starsign={starsign} />
+    </div>
   );
 }
 

@@ -1,8 +1,7 @@
-import { useState } from "react";
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import FetchHoroscope from "./FetchHoroscope.jsx";
+// import FetchHoroscope from "./FetchHoroscope.jsx";
 import Form from "./Form.jsx";
 
 // App is top level
