@@ -1,7 +1,7 @@
 # week5-juliette-oli-milly
 Zodifac - Find out your future! :crystal_ball:
 
-We are querying data from [Astrzo API](https://rapidapi.com/sameer.kumar/api/aztro) to get a Horoscope for the user and displaying a gif with [GIPHY API](https://giphy.com/)
+We are querying data from [Aztro API](https://rapidapi.com/sameer.kumar/api/aztro) to get a Horoscope for the user and displaying a gif with [GIPHY API](https://giphy.com/)
 
 Constellation API ???
 
