@@ -20,8 +20,6 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h1>ZodiFac</h1>
         <Form />
-        <p></p>
-        <p></p>
       </header>
     </div>
   );
