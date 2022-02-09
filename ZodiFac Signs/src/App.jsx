@@ -1,42 +1,28 @@
 import { useState } from "react";
+import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import FetchHoroscope from "./FetchHoroscope.jsx";
+import Form from "./Form.jsx";
+
+// App is top level
+// Form component that will take in user input and pass in data
+// Pass down props into a FetchHoroscope component
+// The FetchHoroscope component has two jobs
+// Take in props, name and starsign
+// Fetch data from Horoscope API and renders this on the page to the user
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [horoscope, setHoroscope] = React.useState("");
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>ZodiFac</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
+        <h1>ZodiFac</h1>
+        <Form />
+        <p></p>
+        <p></p>
       </header>
     </div>
   );
