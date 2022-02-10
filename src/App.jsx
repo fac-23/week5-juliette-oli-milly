@@ -53,8 +53,7 @@ function App() {
           </div>
         )}
       </div>
-      <PickSign setStarField={setStarField}></PickSign>
-
+      {formVisible && <PickSign setStarField={setStarField}></PickSign>}
     </div>
   );
 }
