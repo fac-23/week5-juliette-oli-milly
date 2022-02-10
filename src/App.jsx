@@ -3,6 +3,10 @@ import logo from "./logo.svg";
 import "./App.css";
 // import FetchHoroscope from "./FetchHoroscope.jsx";
 import Form from "./Form.jsx";
+import FetchGif from "./FetchGif.jsx";
+import FetchColor from "./FetchColor.jsx";
+import FetchMood from "./FetchMood.jsx";
+import FetchHoroscope from "./FetchHoroscope";
 
 // App is top level
 // Form component that will take in user input and pass in data
@@ -12,15 +16,26 @@ import Form from "./Form.jsx";
 // Fetch data from Horoscope API and renders this on the page to the user
 
 function App() {
+  const [formVisible, setFormVisibility] = React.useState(true);
+  const [name, setName] = React.useState("");
+  const [starsign, setStarsign] = React.useState("");
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>ZodiFac</h1>
-        <Form />
-        <p></p>
-        <p></p>
       </header>
+      {formVisible && (
+        <Form
+          setFormVisibility={setFormVisibility}
+          setName={setName}
+          setStarsign={setStarsign}
+        />
+      )}
+      <FetchHoroscope name={name} starsign={starsign} />
+      <FetchGif name={name} starsign={starsign} />
+      <FetchColor starsign={starsign} />
+      <FetchMood starsign={starsign} />
     </div>
   );
 }
