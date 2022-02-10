@@ -1,7 +1,7 @@
 import React from "react";
 
-function FetchMore({ starsign }) {
-  const [color, setColor] = React.useState("");
+function FetchMood({ starsign }) {
+  const [mood, setMood] = React.useState("");
 
   React.useEffect(() => {
     if (starsign.length > 0) {
@@ -18,12 +18,12 @@ function FetchMore({ starsign }) {
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
-          setColor(data.color);
+          setMood(data.mood);
         });
     }
   }, [starsign]);
 
-  return <p> Here's your {color} </p>;
+  return <p> You are feeling {mood} today </p>;
 }
 
-export default FetchMore;
+export default FetchMood;

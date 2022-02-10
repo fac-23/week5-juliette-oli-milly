@@ -1,7 +1,8 @@
 import React from "react";
 import FetchHoroscope from "./FetchHoroscope.jsx";
 import FetchGif from "./FetchGif.jsx";
-import FetchMore from "./FetchMore.jsx";
+import FetchColor from "./FetchColor.jsx";
+import FetchMood from "./FetchMood.jsx";
 
 function Form() {
   const [name, setName] = React.useState("");
@@ -27,7 +28,8 @@ function Form() {
       </form>
       <FetchHoroscope name={name} starsign={starsign} />
       <FetchGif name={name} starsign={starsign} />
-      <FetchMore starsign={starsign} />
+      <FetchColor starsign={starsign} />
+      <FetchMood starsign={starsign} />
     </div>
   );
 }
