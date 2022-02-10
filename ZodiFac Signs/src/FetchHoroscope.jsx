@@ -17,6 +17,7 @@ function FetchHoroscope({ name, starsign }) {
       )
         .then((response) => response.json())
         .then((data) => {
+          console.log(data);
           setHoroscope(data.description);
         })
         .catch((err) => {
