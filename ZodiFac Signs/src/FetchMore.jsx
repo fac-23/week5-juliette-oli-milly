@@ -1,10 +1,10 @@
 import React from "react";
 
-function FetchMore({ colors }) {
-  const [info, setInfo] = React.useState("");
+function FetchMore({ starsign }) {
+  const [color, setColor] = React.useState("");
 
   React.useEffect(() => {
-    if (colors.length > 0) {
+    if (starsign.length > 0) {
       fetch(
         `https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=${starsign}&day=today`,
         {
@@ -16,13 +16,14 @@ function FetchMore({ colors }) {
         }
       )
         .then((response) => response.json())
-        .then((response) => {
-          setInfo(data.color);
+        .then((data) => {
+          console.log(data);
+          setColor(data.color);
         });
     }
-  }, [colors]);
+  }, [starsign]);
 
-  return <p>{data.color}</p>;
+  return <p> Here's your {color} </p>;
 }
 
 export default FetchMore;
