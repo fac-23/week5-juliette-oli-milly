@@ -20,6 +20,9 @@ function App() {
   const [name, setName] = React.useState("");
   const [starsign, setStarsign] = React.useState("");
   return (
+      <div className="grid-container">
+      <div className="stars"> Here is something</div>
+    
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -36,6 +39,7 @@ function App() {
       <FetchGif name={name} starsign={starsign} />
       <FetchColor starsign={starsign} />
       <FetchMood starsign={starsign} />
+         </div>
     </div>
   );
 }
