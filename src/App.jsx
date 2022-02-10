@@ -13,14 +13,17 @@ import Form from "./Form.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>ZodiFac</h1>
-        <Form />
-        <p></p>
-        <p></p>
-      </header>
+    <div className="grid-container">
+      <div className="stars"> Here is something</div>
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1>ZodiFac</h1>
+          <Form />
+          <p></p>
+          <p></p>
+        </header>
+      </div>
     </div>
   );
 }

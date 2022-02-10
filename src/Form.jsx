@@ -12,9 +12,10 @@ function Form() {
   // Render this data on the page
   // Add event listener to fire when user enters data
   return (
-    <div>
+    <div className="flex-column">
+      <div></div>
       <form
-        className="flex"
+        className=" form stack-sm width-sm center"
         onSubmit={(event) => {
           event.preventDefault();
           setName(event.target.name.value);
@@ -28,9 +29,7 @@ function Form() {
         <button type="submit">Submit</button>
       </form>
       <FetchHoroscope name={name} starsign={starsign} />
-      <FetchGif name={name} starsign={starsign} />
-      <FetchColor starsign={starsign} />
-      <FetchMood starsign={starsign} />
+      <FetchGif name={name} starsign={starsign}></FetchGif>
     </div>
   );
 }
