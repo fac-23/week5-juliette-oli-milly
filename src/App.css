@@ -4,9 +4,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
-
-  
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -18,12 +16,11 @@
 
 .App-header {
   background-color: var(--color-background);
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1vmin);
   color: white;
 }
 
@@ -35,6 +32,47 @@
   background-color: var(--color-background);
   border-radius: 5%;
   border: solid var(--color-lightgreen) 0.5rem;
+  /* grid-column: 3 / span 3;
+  grid-row: row1-end / span 4; */
+}
+
+.star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .image {
+    width: auto;
+    max-height: 15vmin;
+    animation: Star-appear infinite 60s linear;
+  }
+}
+
+img {
+  transition: all 5s ease-in-out;
+}
+
+@keyframes Star-appear {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes App-logo-spin {
@@ -54,12 +92,11 @@ button {
   transition: color 100ms;
 }
 
-
 /* CSS */
 .button-1 {
-  background-color: #EA4C89;
+  background-color: #ea4c89;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   height: 40px;
@@ -68,11 +105,7 @@ button {
   margin: 0;
   gap: 0.5em;
   outline: none;
-  padding: 10px 16px;
   position: relative;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: baseline;
 }
 
 button:hover,
@@ -80,7 +113,7 @@ button:focus {
   background-color: var(--color-khaki);
 }
 
-input{
+input {
   border-radius: 5%;
 }
 /*------------------------------------*\
@@ -128,25 +161,29 @@ input{
 }
 
 .flex-column {
+  display: flex;
   flex-direction: column;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 0.3fr 1fr 0.3fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 0.3fr 0.3fr 1fr 0.3fr 0.3fr;
+  grid-template-rows: 0.3fr 0.3fr 0.3fr;
+  /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
 }
 
 /* COLORS*/
 body {
-background-color: var(--color-background);
+  background-color: var(--color-background);
+  color: var(--color-paragraph);
   /* Colors */
-  --color-background: #1f1f1f;
+  --color-background: rgb(0, 0, 0);
   --color-lightgreen: #9fcc2e;
-  --color-khaki: #5A6650;
+  --color-khaki: #5a6650;
   --color-darkgreen: #072117;
 
   /* font colors */
-  --color-paragraph: 
-  --color-headings: 
+  --color-paragraph: white;
+  --color-headings: white;
 }
