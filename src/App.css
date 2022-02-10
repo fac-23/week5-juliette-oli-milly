@@ -1,9 +1,12 @@
 .App {
   text-align: center;
+  background-color: var(--color-background);
 }
 
 .App-logo {
   height: 40vmin;
+
+  
   pointer-events: none;
 }
 
@@ -14,7 +17,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--color-background);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,9 +27,14 @@
   color: white;
 }
 
-.flex {
-  display: grid;
-  flex-direction: row;
+.form {
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  background-color: var(--color-background);
+  border-radius: 5%;
+  border: solid var(--color-lightgreen) 0.5rem;
 }
 
 @keyframes App-logo-spin {
@@ -40,4 +48,105 @@
 
 button {
   font-size: calc(10px + 2vmin);
+  border-radius: 8px;
+  border-style: none;
+  background-color: var(--color-lightgreen);
+  transition: color 100ms;
+}
+
+
+/* CSS */
+.button-1 {
+  background-color: #EA4C89;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  gap: 0.5em;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--color-khaki);
+}
+
+input{
+  border-radius: 5%;
+}
+/*------------------------------------*\
+  MODIFIER CLASSES
+\*------------------------------------*/
+
+/* width modifier classes */
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60rem;
+}
+
+.width-lg {
+  max-width: 60rem;
+}
+
+.width-md {
+  max-width: 40rem;
+}
+
+.width-sm {
+  max-width: 20rem;
+}
+
+/* stack modifier classes */
+
+.stack-lg > * + * {
+  margin-top: 3rem;
+}
+
+.stack-md > * + * {
+  margin-top: 1.2rem;
+}
+
+.stack-sm > * + * {
+  margin-top: 0.5rem;
+}
+
+/* FLEX/GRID modifier classes */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+/* COLORS*/
+body {
+background-color: var(--color-background);
+  /* Colors */
+  --color-background: #1f1f1f;
+  --color-lightgreen: #9fcc2e;
+  --color-khaki: #5A6650;
+  --color-darkgreen: #072117;
+
+  /* font colors */
+  --color-paragraph: 
+  --color-headings: 
 }
