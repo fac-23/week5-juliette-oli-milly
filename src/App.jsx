@@ -7,6 +7,7 @@ import FetchGif from "./FetchGif.jsx";
 import FetchColor from "./FetchColor.jsx";
 import FetchMood from "./FetchMood.jsx";
 import FetchHoroscope from "./FetchHoroscope";
+import ColorText from "./ColorText.jsx";
 
 // App is top level
 // Form component that will take in user input and pass in data
@@ -20,26 +21,26 @@ function App() {
   const [name, setName] = React.useState("");
   const [starsign, setStarsign] = React.useState("");
   return (
-      <div className="grid-container">
+    <div className="grid-container">
       <div className="stars"> Here is something</div>
-    
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>ZodiFac</h1>
-      </header>
-      {formVisible && (
-        <Form
-          setFormVisibility={setFormVisibility}
-          setName={setName}
-          setStarsign={setStarsign}
-        />
-      )}
-      <FetchHoroscope name={name} starsign={starsign} />
-      <FetchGif name={name} starsign={starsign} />
-      <FetchColor starsign={starsign} />
-      <FetchMood starsign={starsign} />
-         </div>
+
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1>ZodiFac</h1>
+        </header>
+        {formVisible && (
+          <Form
+            setFormVisibility={setFormVisibility}
+            setName={setName}
+            setStarsign={setStarsign}
+          />
+        )}
+        <FetchHoroscope name={name} starsign={starsign} />
+        <FetchGif name={name} starsign={starsign} />
+        <FetchColor starsign={starsign} />
+        <FetchMood starsign={starsign} />
+      </div>
     </div>
   );
 }
