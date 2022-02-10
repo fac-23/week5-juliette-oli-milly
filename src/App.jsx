@@ -7,6 +7,8 @@ import FetchGif from "./FetchGif.jsx";
 import FetchColor from "./FetchColor.jsx";
 import FetchMood from "./FetchMood.jsx";
 import FetchHoroscope from "./FetchHoroscope";
+import ColorText from "./ColorText.jsx";
+import PickSign from "./datepicker";
 
 //IMAGES
 import Aquarius from "./imgs/Aquarius.png";
@@ -33,6 +35,8 @@ function App() {
   const [formVisible, setFormVisibility] = React.useState(true);
   const [name, setName] = React.useState("");
   const [starsign, setStarsign] = React.useState("");
+  const [populateStarField, setStarField] = React.useState("");
+  
   const [visibleStar, setVisibleStar] = React.useState(false);
   const [visibleStar1, setVisibleStar1] = React.useState(false);
   const [visibleStar2, setVisibleStar2] = React.useState(false);
@@ -115,6 +119,7 @@ function App() {
       >
         {visibleStar6 && <img className="image" src={Libra} />}
       </div>
+
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -122,16 +127,19 @@ function App() {
         </header>
         {formVisible && (
           <Form
+            populateStarField={populateStarField}
             setFormVisibility={setFormVisibility}
             setName={setName}
             setStarsign={setStarsign}
           />
         )}
+       
         <FetchHoroscope name={name} starsign={starsign} />
         <FetchGif name={name} starsign={starsign} />
         <FetchColor starsign={starsign} />
         <FetchMood starsign={starsign} />
       </div>
+
       <div
         className="stars"
         onMouseEnter={() => setVisibleStar7(true)}
@@ -169,6 +177,22 @@ function App() {
       ></div>
       <div className="blank"></div>
       <div className="blank"></div>
+
+        {!formVisible && (
+          <div>
+            <FetchHoroscope name={name} starsign={starsign} />
+            <FetchGif
+              name={name}
+              starsign={starsign}
+              formVisible={formVisible}
+            />
+            <FetchColor starsign={starsign} />
+            <FetchMood starsign={starsign} />
+          </div>
+        )}
+      </div>
+      {formVisible && <PickSign setStarField={setStarField}></PickSign>}
+
     </div>
   );
 }

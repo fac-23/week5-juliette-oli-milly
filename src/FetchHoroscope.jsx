@@ -2,6 +2,7 @@ import React from "react";
 
 function FetchHoroscope({ name, starsign }) {
   const [horoscope, setHoroscope] = React.useState(null);
+  const [horoVisible, setHoroVisibility] = React.useState(false);
 
   React.useEffect(() => {
     if (starsign.length > 0) {
@@ -28,8 +29,21 @@ function FetchHoroscope({ name, starsign }) {
 
   return (
     <div>
-      Hi {name}, you are a {starsign}. Your reading of the stars says:
-      {horoscope}
+      <button
+        onClick={() => {
+          setHoroVisibility(!horoVisible);
+        }}
+      >
+        Your future is toggleable
+      </button>
+      {horoVisible ? (
+        <div>
+          Hi {name}, you are a {starsign}. Your reading of the stars says:
+          {horoscope}
+        </div>
+      ) : (
+        <div>Future Hidden</div>
+      )}
     </div>
   );
 }
