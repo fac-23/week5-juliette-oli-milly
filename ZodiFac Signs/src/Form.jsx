@@ -10,9 +10,9 @@ function Form() {
   // Render this data on the page
   // Add event listener to fire when user enters data
   return (
-    <div>
+    <div className="flex-column">
       <form
-        className="flex"
+        className=" form stack-sm width-sm center"
         onSubmit={(event) => {
           event.preventDefault();
           setName(event.target.name.value);

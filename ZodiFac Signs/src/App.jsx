@@ -15,12 +15,15 @@ function App() {
   const [horoscope, setHoroscope] = React.useState("");
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>ZodiFac</h1>
-        <Form />
-      </header>
+    <div className="grid-container">
+      <div className="stars"> Here is something</div>
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1>ZodiFac</h1>
+          <Form />
+        </header>
+      </div>
     </div>
   );
 }
