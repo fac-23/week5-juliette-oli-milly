@@ -14,6 +14,7 @@ function Form() {
   return (
     <div>
       <form
+        className="flex"
         onSubmit={(event) => {
           event.preventDefault();
           setName(event.target.name.value);
