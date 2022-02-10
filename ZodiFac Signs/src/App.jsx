@@ -12,14 +12,14 @@ import Form from "./Form.jsx";
 // Fetch data from Horoscope API and renders this on the page to the user
 
 function App() {
-  const [horoscope, setHoroscope] = React.useState("");
-
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>ZodiFac</h1>
         <Form />
+        <p></p>
+        <p></p>
       </header>
     </div>
   );
