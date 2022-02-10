@@ -23,7 +23,7 @@ function Form({ setFormVisibility, setName, setStarsign, populateStarField }) {
           name="starsign"
           type="text"
           id="starsign"
-          value={populateStarField}
+          defaultValue={populateStarField}
         ></input>
         <button type="submit">Submit</button>
       </form>
