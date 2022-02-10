@@ -6,7 +6,6 @@
 .App-logo {
   height: 40vmin;
 
-  
   pointer-events: none;
 }
 
@@ -54,12 +53,11 @@ button {
   transition: color 100ms;
 }
 
-
 /* CSS */
 .button-1 {
-  background-color: #EA4C89;
+  background-color: #ea4c89;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   height: 40px;
@@ -80,7 +78,7 @@ button:focus {
   background-color: var(--color-khaki);
 }
 
-input{
+input {
   border-radius: 5%;
 }
 /*------------------------------------*\
@@ -139,15 +137,17 @@ input{
 
 /* COLORS*/
 body {
-background-color: var(--color-background);
+  background-color: var(--color-background);
+  color: var(--color-paragraph);
   /* Colors */
   --color-background: #1f1f1f;
   --color-lightgreen: #9fcc2e;
-  --color-khaki: #5A6650;
+  --color-khaki: #5a6650;
   --color-darkgreen: #072117;
 
   /* font colors */
-  --color-paragraph: 
+
+  --color-paragraph: rgb(151, 144, 144);
   --color-headings: 
 }
 

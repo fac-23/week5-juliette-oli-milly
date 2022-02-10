@@ -2,6 +2,7 @@ import React from "react";
 
 function FetchMood({ starsign }) {
   const [mood, setMood] = React.useState("");
+  const [moodVisible, setMoodVisibility] = React.useState(false);
 
   React.useEffect(() => {
     if (starsign.length > 0) {
@@ -23,7 +24,22 @@ function FetchMood({ starsign }) {
     }
   }, [starsign]);
 
-  return <p> You are feeling {mood} today </p>;
+  return (
+    <div>
+      <button
+        onClick={() => {
+          setMoodVisibility(!moodVisible);
+        }}
+      >
+        Your mood is toggleable
+      </button>
+      {moodVisible ? (
+        <p> You are feeling {mood} today </p>
+      ) : (
+        <div>Future Hidden</div>
+      )}
+    </div>
+  );
 }
 
 export default FetchMood;

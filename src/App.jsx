@@ -8,6 +8,7 @@ import FetchColor from "./FetchColor.jsx";
 import FetchMood from "./FetchMood.jsx";
 import FetchHoroscope from "./FetchHoroscope";
 import ColorText from "./ColorText.jsx";
+import PickSign from "./datepicker";
 
 // App is top level
 // Form component that will take in user input and pass in data
@@ -20,6 +21,7 @@ function App() {
   const [formVisible, setFormVisibility] = React.useState(true);
   const [name, setName] = React.useState("");
   const [starsign, setStarsign] = React.useState("");
+  const [populateStarField, setStarField] = React.useState("");
   return (
     <div className="grid-container">
       <div className="stars"> Here is something</div>
@@ -31,16 +33,28 @@ function App() {
         </header>
         {formVisible && (
           <Form
+            populateStarField={populateStarField}
             setFormVisibility={setFormVisibility}
             setName={setName}
             setStarsign={setStarsign}
           />
         )}
-        <FetchHoroscope name={name} starsign={starsign} />
-        <FetchGif name={name} starsign={starsign} />
-        <FetchColor starsign={starsign} />
-        <FetchMood starsign={starsign} />
+
+        {!formVisible && (
+          <div>
+            <FetchHoroscope name={name} starsign={starsign} />
+            <FetchGif
+              name={name}
+              starsign={starsign}
+              formVisible={formVisible}
+            />
+            <FetchColor starsign={starsign} />
+            <FetchMood starsign={starsign} />
+          </div>
+        )}
       </div>
+      <PickSign setStarField={setStarField}></PickSign>
+
     </div>
   );
 }
