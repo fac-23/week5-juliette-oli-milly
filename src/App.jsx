@@ -32,6 +32,7 @@ function App() {
         </header>
         {formVisible && (
           <Form
+            populateStarField={populateStarField}
             setFormVisibility={setFormVisibility}
             setName={setName}
             setStarsign={setStarsign}

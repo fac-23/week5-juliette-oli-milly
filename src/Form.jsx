@@ -1,6 +1,5 @@
 import React from "react";
-import FetchHoroscope from "./FetchHoroscope.jsx";
-function Form({ setFormVisibility, setName, setStarsign }) {
+function Form({ setFormVisibility, setName, setStarsign, populateStarField }) {
   // Create a form for user to input their data
   // Use the input data to fetch data from Horoscope API
   // Render this data on the page
@@ -20,10 +19,14 @@ function Form({ setFormVisibility, setName, setStarsign }) {
         <label htmlFor="name">Name</label>
         <input name="name" type="text" id="name"></input>
         <label htmlFor="starsign">Star Sign</label>
-        <input name="starsign" type="text" id="starsign"></input>
+        <input
+          name="starsign"
+          type="text"
+          id="starsign"
+          value={populateStarField}
+        ></input>
         <button type="submit">Submit</button>
       </form>
-
     </div>
   );
 }
