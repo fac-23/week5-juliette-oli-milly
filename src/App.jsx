@@ -7,6 +7,7 @@ import FetchGif from "./FetchGif.jsx";
 import FetchColor from "./FetchColor.jsx";
 import FetchMood from "./FetchMood.jsx";
 import FetchHoroscope from "./FetchHoroscope";
+import PickSign from "./datepicker";
 
 // App is top level
 // Form component that will take in user input and pass in data
@@ -19,6 +20,7 @@ function App() {
   const [formVisible, setFormVisibility] = React.useState(true);
   const [name, setName] = React.useState("");
   const [starsign, setStarsign] = React.useState("");
+  const [populateStarField, setStarField] = React.useState("");
   return (
     <div className="grid-container">
       <div className="stars"> Here is something</div>
@@ -49,6 +51,7 @@ function App() {
           </div>
         )}
       </div>
+      <PickSign setStarField={setStarField}></PickSign>
     </div>
   );
 }

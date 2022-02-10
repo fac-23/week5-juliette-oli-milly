@@ -146,6 +146,6 @@ body {
   --color-darkgreen: #072117;
 
   /* font colors */
-  --color-paragraph: white;
+  --color-paragraph: rgb(151, 144, 144);
   --color-headings: ;
 }
