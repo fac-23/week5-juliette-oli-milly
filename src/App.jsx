@@ -7,6 +7,7 @@ import FetchGif from "./FetchGif.jsx";
 import FetchColor from "./FetchColor.jsx";
 import FetchMood from "./FetchMood.jsx";
 import FetchHoroscope from "./FetchHoroscope";
+import ColorText from "./ColorText.jsx";
 import PickSign from "./datepicker";
 
 // App is top level
@@ -53,6 +54,7 @@ function App() {
         )}
       </div>
       <PickSign setStarField={setStarField}></PickSign>
+
     </div>
   );
 }

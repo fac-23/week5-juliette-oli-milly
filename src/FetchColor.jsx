@@ -23,7 +23,7 @@ function FetchColor({ starsign }) {
     }
   }, [starsign]);
 
-  return <p> Here's your {color} </p>;
+  return <p className={color}>Your color is ...{color}</p>;
 }
 
 export default FetchColor;
