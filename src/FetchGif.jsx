@@ -27,7 +27,7 @@ function FetchGif({ starsign }) {
       >
         Click here to reveal your starsign art
       </button>
-      {gifVisible ? <img src={gif}></img> : <div>Future Hidden</div>}
+      {gifVisible ? <img src={gif} className="gif"></img> : <div></div>}
     </div>
   );
 }

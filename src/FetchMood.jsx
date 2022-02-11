@@ -18,7 +18,6 @@ function FetchMood({ starsign }) {
       )
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
           setMood(data.mood);
         });
     }
@@ -33,11 +32,7 @@ function FetchMood({ starsign }) {
       >
         Click here to reveal your mood
       </button>
-      {moodVisible ? (
-        <p> You are feeling {mood} today </p>
-      ) : (
-        <div>Future Hidden</div>
-      )}
+      {moodVisible ? <p> You are feeling {mood} today </p> : <div></div>}
     </div>
   );
 }

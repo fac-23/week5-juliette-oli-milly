@@ -43,7 +43,7 @@ function FetchHoroscope({ name, starsign }) {
           {horoscope}
         </div>
       ) : (
-        <div>Future Hidden</div>
+        <div></div>
       )}
     </div>
   );
