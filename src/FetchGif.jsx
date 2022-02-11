@@ -25,7 +25,7 @@ function FetchGif({ starsign }) {
           setGifVisibility(!gifVisible);
         }}
       >
-        Your star sign art is toggleable
+        Click here to reveal your starsign art
       </button>
       {gifVisible ? <img src={gif}></img> : <div>Future Hidden</div>}
     </div>

@@ -34,11 +34,12 @@ function FetchHoroscope({ name, starsign }) {
           setHoroVisibility(!horoVisible);
         }}
       >
-        Your future is toggleable
+        Click to reveal your daily horoscope
       </button>
       {horoVisible ? (
         <div>
-          Hi {name}, you are a {starsign}. Your reading of the stars says:
+          Hi {name}, as a {starsign}, let's see what's written in the stars for
+          you today....
           {horoscope}
         </div>
       ) : (
