@@ -10,6 +10,22 @@ import FetchHoroscope from "./FetchHoroscope";
 import ColorText from "./ColorText.jsx";
 import PickSign from "./datepicker";
 
+//IMAGES
+import Aquarius from "./imgs/Aquarius.png";
+import Aries from "./imgs/aries.png";
+import Cancer from "./imgs/cancer.png";
+import Capricorn from "./imgs/capricorn.png";
+import Gemini from "./imgs/gemini.png";
+import Leo from "./imgs/leo.png";
+import Libra from "./imgs/libra.png";
+import Pisces from "./imgs/Pisces.png";
+import Saggitarius from "./imgs/Sagittarius.png";
+import Scorpio from "./imgs/scorpio.png";
+import Taurus from "./imgs/tauras.png";
+import Virgo from "./imgs/virgo.png";
+import pickSign from "./datepicker";
+
+
 // App is top level
 // Form component that will take in user input and pass in data
 // Pass down props into a FetchHoroscope component
@@ -22,6 +38,18 @@ function App() {
   const [name, setName] = React.useState("");
   const [starsign, setStarsign] = React.useState("");
   const [populateStarField, setStarField] = React.useState("");
+
+
+  const [visibleStar, setVisibleStar] = React.useState(false);
+  const [visibleStar1, setVisibleStar1] = React.useState(false);
+  const [visibleStar2, setVisibleStar2] = React.useState(false);
+  const [visibleStar3, setVisibleStar3] = React.useState(false);
+  const [visibleStar4, setVisibleStar4] = React.useState(false);
+  const [visibleStar5, setVisibleStar5] = React.useState(false);
+  const [visibleStar6, setVisibleStar6] = React.useState(false);
+  const [visibleStar7, setVisibleStar7] = React.useState(false);
+  const [visibleStar8, setVisibleStar8] = React.useState(false);
+
   return (
     <div className="grid-container">
       <div className="stars"> Here is something</div>
@@ -40,6 +68,45 @@ function App() {
           />
         )}
 
+      </div>
+
+      <div
+        className="stars"
+        onMouseEnter={() => setVisibleStar7(true)}
+        onMouseLeave={() => setVisibleStar7(false)}
+      >
+        {visibleStar7 && <img className="image" src={Pisces} />}
+      </div>
+      <div
+        className="side"
+        onMouseEnter={() => setVisibleStar8(true)}
+        onMouseLeave={() => setVisibleStar8(false)}
+      >
+        {visibleStar8 && (
+          <div>
+            <img className="image" src={Saggitarius} />
+            <img className="image" src={Virgo} />
+          </div>
+        )}
+      </div>
+
+      <div
+        className="blank"
+        className="blank"
+        onMouseEnter={() => setVisibleStar2(true)}
+        onMouseLeave={() => setVisibleStar2(false)}
+      ></div>
+      <div
+        className="blank"
+        onMouseEnter={() => setVisibleStar6(true)}
+        onMouseLeave={() => setVisibleStar6(false)}
+      ></div>
+      <div
+        className="middle"
+        onMouseEnter={() => setVisibleStar3(true)}
+        onMouseLeave={() => setVisibleStar3(false)}
+      >
+        {formVisible && <PickSign setStarField={setStarField}></PickSign>}
         {!formVisible && (
           <div>
             <FetchHoroscope name={name} starsign={starsign} />
@@ -53,7 +120,11 @@ function App() {
           </div>
         )}
       </div>
+
       <PickSign setStarField={setStarField}></PickSign>
+      <div className="blank"></div>
+      <div className="blank"></div>
+
     </div>
   );
 }
