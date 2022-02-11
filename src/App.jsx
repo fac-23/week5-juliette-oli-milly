@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
+import logo from "./ZodIFAC.png";
 import "./App.css";
 // import FetchHoroscope from "./FetchHoroscope.jsx";
 import Form from "./Form.jsx";
