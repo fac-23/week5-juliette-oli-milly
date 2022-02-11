@@ -134,6 +134,13 @@ function App() {
             setStarsign={setStarsign}
           />
         )}
+        {!formVisible && (
+          <div>
+            <FetchHoroscope name={name} starsign={starsign} />
+            <FetchColor starsign={starsign} />
+            <FetchMood starsign={starsign} />
+          </div>
+        )}
       </div>
 
       <div
@@ -172,17 +179,19 @@ function App() {
         onMouseEnter={() => setVisibleStar3(true)}
         onMouseLeave={() => setVisibleStar3(false)}
       >
-        {formVisible && <PickSign setStarField={setStarField}></PickSign>}
+        {formVisible && (
+          <div>
+            <p> Pick your date of birth to find your starsign!</p>
+            <PickSign setStarField={setStarField}></PickSign>
+          </div>
+        )}
         {!formVisible && (
           <div>
-            <FetchHoroscope name={name} starsign={starsign} />
             <FetchGif
               name={name}
               starsign={starsign}
               formVisible={formVisible}
             />
-            <FetchColor starsign={starsign} />
-            <FetchMood starsign={starsign} />
           </div>
         )}
       </div>

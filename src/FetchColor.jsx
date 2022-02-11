@@ -2,6 +2,7 @@ import React from "react";
 
 function FetchColor({ starsign }) {
   const [color, setColor] = React.useState("");
+  const [colorVisible, setColorVisibility] = React.useState(false);
 
   React.useEffect(() => {
     if (starsign.length > 0) {
@@ -22,8 +23,22 @@ function FetchColor({ starsign }) {
         });
     }
   }, [starsign]);
-
-  return <p className={color}>Your color is ...{color}</p>;
+  return (
+    <div>
+      <button
+        onClick={() => {
+          setColorVisibility(!colorVisible);
+        }}
+      >
+        Click here to reveal your colour of the day
+      </button>
+      {colorVisible ? (
+        <p className={color}>Your color is ...{color}</p>
+      ) : (
+        <div></div>
+      )}
+    </div>
+  );
 }
 
 export default FetchColor;
