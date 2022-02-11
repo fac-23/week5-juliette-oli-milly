@@ -40,11 +40,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 20vmin;
 }
 .middle {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 20vmin;
 }
 
 .side {
@@ -168,7 +170,7 @@ input {
 .grid-container {
   display: grid;
   grid-template-columns: 0.3fr 0.3fr 1fr 0.3fr 0.3fr;
-  grid-template-rows: 0.3fr 0.3fr 0.3fr;
+  grid-template-rows: 0.3fr 1fr 1fr;
   /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
 }
@@ -185,16 +187,16 @@ body {
 
   /* font colors */
   --color-paragraph: rgb(151, 144, 144);
-  --color-headings: 
+  --color-headings: ;
 }
 
 /* Zodiac Color Classes make the FetchColor 
 JSON string color text change to the color they are! */
 .Orange {
-  color: #FFA500;
+  color: #ffa500;
 }
 .Copper {
-  color: #B87333;
+  color: #b87333;
 }
 .Red {
   color: #df2727;
@@ -203,18 +205,17 @@ JSON string color text change to the color they are! */
   color: #517bf0;
 }
 .Sky_Blue {
-   color: #87CEEB;
+  color: #87ceeb;
 }
 .Yellow {
-   color: #ffc400;
+  color: #ffc400;
 }
 .Peach {
-   color: #ffc9b4;
+  color: #ffc9b4;
 }
 .Purple {
-   color: #7a44dd;
+  color: #7a44dd;
 }
 .Teal {
   color: #008080;
 }
-

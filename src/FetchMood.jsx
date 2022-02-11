@@ -31,7 +31,7 @@ function FetchMood({ starsign }) {
           setMoodVisibility(!moodVisible);
         }}
       >
-        Your mood is toggleable
+        Click here to reveal your mood
       </button>
       {moodVisible ? (
         <p> You are feeling {mood} today </p>

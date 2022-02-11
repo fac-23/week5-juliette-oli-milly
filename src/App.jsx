@@ -23,6 +23,7 @@ import Saggitarius from "./imgs/Sagittarius.png";
 import Scorpio from "./imgs/scorpio.png";
 import Taurus from "./imgs/tauras.png";
 import Virgo from "./imgs/virgo.png";
+import pickSign from "./datepicker";
 
 // App is top level
 // Form component that will take in user input and pass in data
@@ -36,7 +37,7 @@ function App() {
   const [name, setName] = React.useState("");
   const [starsign, setStarsign] = React.useState("");
   const [populateStarField, setStarField] = React.useState("");
-  
+
   const [visibleStar, setVisibleStar] = React.useState(false);
   const [visibleStar1, setVisibleStar1] = React.useState(false);
   const [visibleStar2, setVisibleStar2] = React.useState(false);
@@ -133,11 +134,6 @@ function App() {
             setStarsign={setStarsign}
           />
         )}
-       
-        <FetchHoroscope name={name} starsign={starsign} />
-        <FetchGif name={name} starsign={starsign} />
-        <FetchColor starsign={starsign} />
-        <FetchMood starsign={starsign} />
       </div>
 
       <div
@@ -159,9 +155,10 @@ function App() {
           </div>
         )}
       </div>
+
       <div
         className="blank"
-        className="middle"
+        className="blank"
         onMouseEnter={() => setVisibleStar2(true)}
         onMouseLeave={() => setVisibleStar2(false)}
       ></div>
@@ -171,13 +168,11 @@ function App() {
         onMouseLeave={() => setVisibleStar6(false)}
       ></div>
       <div
-        className="blank"
+        className="middle"
         onMouseEnter={() => setVisibleStar3(true)}
         onMouseLeave={() => setVisibleStar3(false)}
-      ></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-
+      >
+        {formVisible && <PickSign setStarField={setStarField}></PickSign>}
         {!formVisible && (
           <div>
             <FetchHoroscope name={name} starsign={starsign} />
@@ -191,8 +186,8 @@ function App() {
           </div>
         )}
       </div>
-      {formVisible && <PickSign setStarField={setStarField}></PickSign>}
-
+      <div className="blank"></div>
+      <div className="blank"></div>
     </div>
   );
 }
