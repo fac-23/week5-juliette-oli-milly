@@ -1,5 +1,4 @@
-# week5-juliette-oli-milly
-Zodifac - Find out your future! :crystal_ball: Deployed on Netlify here...:point_right: [Zodifac](https://agitated-wilson-4391fd.netlify.app/)
+# Zodifac - Find out your future! :crystal_ball: Deployed on Netlify here...:point_right: [Zodifac](https://agitated-wilson-4391fd.netlify.app/)
 
 Our project idea was to predict the future with horoscopes and gifs! And we have zodiac star constellations floating around our page when you hover over them like the night sky! 🌃
 
