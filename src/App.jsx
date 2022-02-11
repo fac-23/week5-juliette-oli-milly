@@ -172,6 +172,7 @@ function App() {
         onMouseEnter={() => setVisibleStar3(true)}
         onMouseLeave={() => setVisibleStar3(false)}
       >
+        {formVisible && <PickSign setStarField={setStarField}></PickSign>}
         {!formVisible && (
           <div>
             <FetchHoroscope name={name} starsign={starsign} />
@@ -185,9 +186,7 @@ function App() {
           </div>
         )}
       </div>
-      <div className="blank">
-        {formVisible && <PickSign setStarField={setStarfield}></PickSign>}
-      </div>
+      <div className="blank"></div>
       <div className="blank"></div>
     </div>
   );
